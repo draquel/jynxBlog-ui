@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Post} from '../../shared/model/post.model';
 
 @Component({
   selector: 'app-featured',
@@ -9,13 +10,7 @@ export class FeaturedComponent implements OnInit {
 
   @Input() posts: Post[];
   constructor() {
-    this.posts = [{
-      title: '',
-      tagline: '',
-      created: '',
-      author: '',
-      body: ''
-    }];
+    this.posts = [];
   }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Post} from '../../shared/model/post.model';
 
 @Component({
   selector: 'app-post',
@@ -14,7 +15,7 @@ export class PostComponent implements OnInit {
       title: '',
       tagline: '',
       created: '',
-      author: '',
+      authorFullName: '',
       body: ''
     };
   }
