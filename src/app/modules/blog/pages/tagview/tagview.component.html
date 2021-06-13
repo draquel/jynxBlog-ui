@@ -1,0 +1,13 @@
+<div class="row g-5">
+  <div class="col-md-8">
+    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+      Latest in {{ tag.tag }}
+    </h3>
+    <app-post *ngFor="let post of posts" [post]="post"></app-post>
+  </div>
+
+  <div class="col-md-4 pt-4">
+    <app-sidebar>b</app-sidebar>
+  </div>
+</div>
+

@@ -7,19 +7,20 @@ import { map, catchError} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class TagService {
+
   baseUrl = 'http://localhost:8080/v1/';
 
   constructor(private http: HttpClient) { }
 
-  getPost(id: number): Observable<any>{
-    return this.http.get(this.baseUrl + 'posts/' + id);
+  getTag(id: number): Observable<any>{
+    return this.http.get(this.baseUrl + 'tags/' + id);
   }
 
-  getPosts(params?: HttpParams): Observable<any> {
+  getTags(params?: HttpParams): Observable<any> {
     if (params != null) {
-      return this.http.get(this.baseUrl + 'posts', {params});
+      return this.http.get(this.baseUrl + 'tags', {params});
     }
-    return this.http.get(this.baseUrl + 'posts');
+    return this.http.get(this.baseUrl + 'tags');
   }
 }

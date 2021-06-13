@@ -1,0 +1,14 @@
+<article class="blog-post">
+  <div class="mb-4 pb-4">
+    <h2 class="blog-post-title mx-1">{{ post.title }}</h2>
+    <div class="row">
+      <div class="col-6">
+        <p class="blog-post-meta mx-1 mb-2">by <a href="#">{{ post.authorFullName }}</a> on {{ this.formatDate(post.createdAt) }}</p>
+      </div>
+      <div class="col-6 text-end">
+        <span class="badge bg-secondary mx-1" *ngFor="let tag of post.tags" >{{ tag.tag }}</span>
+        </div>
+    </div>
+  </div>
+  <div [innerHTML]="post.body"></div>
+</article>
