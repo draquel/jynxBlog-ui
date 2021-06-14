@@ -18,7 +18,7 @@
 
   <div class=" py-2 mb-4 border-bottom">
     <nav class="nav d-flex align-items-center p-0" [class.justify-content-evenly]="tags.length < 5" [class.justify-content-between]="tags.length >= 5">
-      <a href="#" *ngFor="let tag of tags"><h5 class="m-0"><span class="badge bg-secondary">{{ tag.tag }}</span></h5></a>
+      <a routerLink="/t/{{tag.id}}" *ngFor="let tag of tags"><h5 class="m-0"><span class="badge bg-secondary">{{ tag.tag }}</span></h5></a>
     </nav>
   </div>
 </div>

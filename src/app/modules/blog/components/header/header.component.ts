@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Tag} from '../../../../shared/model/tag.model';
 import {TagService} from '../../../../shared/service/tag.service';
 import {HttpParams} from '@angular/common/http';
@@ -9,7 +9,6 @@ import {HttpParams} from '@angular/common/http';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
 
   loading: boolean;
   errorMessage: string;
@@ -29,7 +28,7 @@ export class HeaderComponent implements OnInit {
     this.loading = true;
     this.errorMessage = '';
     this.tagService.getTags(params).subscribe((response) => {
-        console.log('response received');
+        console.log('Response received');
         this.tags = response;
       },
       (error) => {

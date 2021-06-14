@@ -1,13 +1,14 @@
 <div class="row g-5">
   <div class="col-md-8">
-    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+    <h3 class="pb-4 mb-4 fst-italic border-bottom" #pageTop>
       Latest in {{ tag.tag }}
     </h3>
     <app-post *ngFor="let post of posts" [post]="post"></app-post>
+    <app-pagination [page]="page" (updatePageEvent)="updatePage($event)"></app-pagination>
   </div>
 
   <div class="col-md-4 pt-4">
-    <app-sidebar>b</app-sidebar>
+    <app-sidebar></app-sidebar>
   </div>
 </div>
 

@@ -6,7 +6,7 @@
         <p class="blog-post-meta mx-1 mb-2">by <a href="#">{{ post.authorFullName }}</a> on {{ this.formatDate(post.createdAt) }}</p>
       </div>
       <div class="col-6 text-end">
-        <span class="badge bg-secondary mx-1" *ngFor="let tag of post.tags" >{{ tag.tag }}</span>
+        <a routerLink="/t/{{tag.id}}" *ngFor="let tag of post.tags"><h6 class="m-0"><span class="badge bg-secondary mx-1" >{{ tag.tag }}</span></h6></a>
         </div>
     </div>
   </div>
