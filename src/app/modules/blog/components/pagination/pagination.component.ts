@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Page} from '../../../../shared/model/page.model';
 
 @Component({
@@ -9,12 +9,19 @@ import {Page} from '../../../../shared/model/page.model';
 export class PaginationComponent implements OnInit {
 
   @Input() page: Page;
+  @Output() updatePageEvent: EventEmitter<number>;
+
   constructor() {
     this.page = new Page();
+    this.updatePageEvent =  new EventEmitter<number>();
   }
 
   ngOnInit(): void {
 
+  }
+
+  updatePage(pg: number): void{
+    this.updatePageEvent.emit(pg);
   }
 
   getNumbers(count: number): number[]{
