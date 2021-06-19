@@ -1,20 +1,15 @@
   <app-featured [posts]="featured"></app-featured>
 
-  <div class="row gx-5 pb-4">
-    <div class="col-md-12 text-center"><h4 class="py-2 bg-secondary">Ad Space</h4></div>
+  <div class="row gx-5 mb-3">
+    <div class="col-md-12 text-center"><h4 class="py-2 mb-0 bg-secondary">Ad Space</h4></div>
   </div>
 
-  <div class="row gx-5" >
+  <div class="row gx-5">
     <div class="col-md-8">
-      <h3 class="pb-4 mb-4 fst-italic border-bottom" #pageTop>
-        Latest from JynxBlog
-      </h3>
-
+      <h3 class="pb-3 mb-3 fst-italic border-bottom sticky-top bg-body" #pageTop>from JynxBlog</h3>
       <div *ngIf="loading" class="text-center m-2"><p class="m-0">.... loading ....</p></div>
       <app-post *ngFor="let post of posts" [post]="post"></app-post>
-
       <app-pagination [page]="page" (updatePageEvent)="updatePage($event)"></app-pagination>
-
     </div>
 
     <div class="col-md-4">
