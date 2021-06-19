@@ -22,7 +22,7 @@
 
   <div class="mb-3 py-2 border-bottom">
     <nav class="nav d-flex align-items-center p-0" [class.justify-content-evenly]="tags.length < 5" [class.justify-content-between]="tags.length >= 5">
-      <a routerLink="/t/{{tag.id}}" *ngFor="let tag of tags"><h5 class="m-0"><span class="badge bg-secondary">{{ tag.tag }}</span></h5></a>
+      <app-tag-badge *ngFor="let tag of tags" [tag]="tag" [size]="4"></app-tag-badge>
     </nav>
   </div>
 </div>

@@ -9,11 +9,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { FeaturedComponent } from './components/featured/featured.component';
 import { PostComponent } from './components/post/post.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import {HttpClient} from '@angular/common/http';
 import { PostviewComponent } from './pages/postview/postview.component';
 import { TagviewComponent } from './pages/tagview/tagview.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PageviewComponent } from './pages/pageview/pageview.component';
+import { TagBadgeListComponent } from './components/tag-badge-list/tag-badge-list.component';
+import { TagBadgeComponent } from './components/tag-badge/tag-badge.component';
 
 // noinspection AngularInvalidImportedOrDeclaredSymbol
 @NgModule({
@@ -28,7 +29,9 @@ import { PageviewComponent } from './pages/pageview/pageview.component';
     PostviewComponent,
     TagviewComponent,
     PaginationComponent,
-    PageviewComponent
+    PageviewComponent,
+    TagBadgeListComponent,
+    TagBadgeComponent
   ],
   imports: [
     CommonModule,

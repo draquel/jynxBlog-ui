@@ -1,0 +1,14 @@
+ <a
+   routerLink="/t/{{tag.id}}"
+   ngSwitch="{{size}}"
+   class="btn btn-link p-0" role="button"
+   [class.ms-1]="startMargin" [class.me-1]="endMargin" [class.mx-1]="xMargin" [class.disabled]="!linkEnabled" [attr.aria-disabled]="!linkEnabled"
+ >
+   <h1 *ngSwitchCase=1 class="d-inline-block m-0" [class.shadow-sm]="shadow"><span class="badge bg-secondary">{{ tag.tag }}</span></h1>
+   <h2 *ngSwitchCase=2 class="d-inline-block m-0" [class.shadow-sm]="shadow"><span class="badge bg-secondary">{{ tag.tag }}</span></h2>
+   <h3 *ngSwitchCase=3 class="d-inline-block m-0" [class.shadow-sm]="shadow"><span class="badge bg-secondary">{{ tag.tag }}</span></h3>
+   <h4 *ngSwitchCase=4 class="d-inline-block m-0" [class.shadow-sm]="shadow"><span class="badge bg-secondary">{{ tag.tag }}</span></h4>
+   <h5 *ngSwitchCase=5 class="d-inline-block m-0" [class.shadow-sm]="shadow"><span class="badge bg-secondary">{{ tag.tag }}</span></h5>
+   <h6 *ngSwitchCase=6 class="d-inline-block m-0" [class.shadow-sm]="shadow"><span class="badge bg-secondary">{{ tag.tag }}</span></h6>
+   <span *ngSwitchDefault class="d-inline-block badge bg-secondary" [class.shadow-sm]="shadow">{{ tag.tag }}</span>
+ </a>

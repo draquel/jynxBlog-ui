@@ -1,0 +1,6 @@
+<span
+  class="d-inline-block"
+  *ngFor="let tag of tags; let isLast = last; let isFirst = first"
+>
+  <app-tag-badge [tag]="tag" [shadow]="true" [size]="size" [startMargin]="isLast && tags.length > 1" [endMargin]="isFirst && tags.length > 1" [xMargin]="(!isFirst && tags.length > 1) && !isLast"></app-tag-badge>
+</span>
